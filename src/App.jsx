@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import ServiceList from "./components/ServiceList";
-import Cart from "./components/Cart";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
 import CheckoutForm from "./components/CheckoutForm";
 import Receipt from "./components/Receipt";
-import Analytics from "./components/Analytics";
+import Analytics from "./pages/Analytics";
 import { CartContextProvider } from "./context/CartContext";
 
 const App = () => {
@@ -16,7 +16,7 @@ const App = () => {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<ServiceList />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/cart" element={<Cart />} />
           <Route
             path="/checkout"
